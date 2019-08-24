@@ -1,0 +1,41 @@
+import 'package:flutter/material.dart';
+import 'package:flutterproject/main1.dart';
+
+void main()=> runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "Intan Yoshana",
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    //Scaffold itu sama kyk activity di AS
+    return Scaffold(
+      appBar: AppBar(title: Text('my first app'),
+      leading: Icon(Icons.home),
+      actions: <Widget>[
+        IconButton(icon: Icon(Icons.search),
+                   onPressed: (){
+                     print('Click Search');
+                   },),
+        IconButton(icon: Icon(Icons.access_alarm), onPressed: () {},),
+        
+        Icon(Icons.settings)
+      ],
+      ),
+    );
+  }
+}
+
