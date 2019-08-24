@@ -121,6 +121,9 @@ class _LoginPageState extends State<LoginPage> {
   void _validasiInputan() {
     if (_formKey.currentState.validate()) {
       _formKey.currentState.save();
+
+      //menampilkan snackbar
+      Scaffold.of(context).showSnackBar(Snackbar(content:Text("Data lengkap"),));
     } else {
       setState(() {
         validasi = true;
