@@ -26,7 +26,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     //Scaffold itu sama kyk activity di AS
     return Scaffold(
-      appBar: AppBar(title: Text('my first app'),
+      appBar: AppBar(title: Text('Owl'),
       leading: Icon(Icons.home),
       actions: <Widget>[
         IconButton(icon: Icon(Icons.search),
