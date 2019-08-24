@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterproject/login.dart';
 import 'package:flutterproject/main1.dart';
 
 void main()=> runApp(MyApp());
@@ -35,16 +36,18 @@ class _MyHomePageState extends State<MyHomePage> {
         Icon(Icons.settings)
       ],
       ),
-      body: Center(
-        child: Row(
-          children: <Widget>[
-            Padding(padding: EdgeInsets.all(100),),
-            Text('Intan Yoshana'),
-            Checkbox(value: true, onChanged: (bool value) {},)
-          ],
-        ),
-      ),
-    );
-  }
-}
+      body: LoginPage()
+            //  Center(
+            //   child: Row(
+            //     children: <Widget>[
+            //       Padding(padding: EdgeInsets.all(100),),
+            //       Text('Intan Yoshana'),
+            //       Checkbox(value: true, onChanged: (bool value) {},)
+            //     ],
+            //   ),
+            // ),
+          );
+        }
+      }
+    
 
