@@ -35,6 +35,15 @@ class _MyHomePageState extends State<MyHomePage> {
         Icon(Icons.settings)
       ],
       ),
+      body: Center(
+        child: Row(
+          children: <Widget>[
+            Padding(padding: EdgeInsets.all(100),),
+            Text('Intan Yoshana'),
+            Checkbox(value: true, onChanged: (bool value) {},)
+          ],
+        ),
+      ),
     );
   }
 }
