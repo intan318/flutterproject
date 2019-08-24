@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toast/toast.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -56,6 +57,7 @@ class _LoginPageState extends State<LoginPage> {
                 obscureText: true,
                 autofocus: false,
                 decoration: InputDecoration(
+                    labelText: 'Password',
                     hintText: 'Password',
                     suffixIcon: Icon(Icons.lock, color: Colors.blue),
                     enabledBorder: OutlineInputBorder(
@@ -88,12 +90,12 @@ class _LoginPageState extends State<LoginPage> {
                   style: TextStyle(
                       color: Colors.blue,
                       fontSize: 16.0,
-                      fontWeight: FontWeight.w300)),
+                      fontWeight: FontWeight.w400)),
               Text("Forgot password",
                   style: TextStyle(
                       color: Colors.blue,
                       fontSize: 16.0,
-                      fontWeight: FontWeight.w300))
+                      fontWeight: FontWeight.w400))
             ],
           ),
         )
@@ -106,7 +108,7 @@ class _LoginPageState extends State<LoginPage> {
         r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
     RegExp regex = new RegExp(pattern);
     if (!regex.hasMatch(email))
-      return 'Enter Valid Email';
+      return 'Enter valid e-mail';
     else
       return null;
   }
@@ -123,11 +125,28 @@ class _LoginPageState extends State<LoginPage> {
       _formKey.currentState.save();
 
       //menampilkan snackbar
-      Scaffold.of(context).showSnackBar(Snackbar(content:Text("Data lengkap"),));
+      Scaffold.of(context).showSnackBar(SnackBar(content:Text("Data lengkap"),));
+      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MainPage()));
     } else {
       setState(() {
         validasi = true;
       });
     }
+  }
+}
+
+class MainPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('page 1'),),
+      body: RaisedButton(
+        child: Text('Back'),
+        onPressed: (){
+          Navigator.pop(context);
+          Toast.show("Back to previous page", context, duration: Toast.LENGTH_SHORT,gravity: Toast.BOTTOM); 
+       },
+      ),
+    );
   }
 }

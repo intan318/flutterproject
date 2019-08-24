@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterproject/login.dart';
 import 'package:flutterproject/main1.dart';
+import 'package:flutterproject/splashscreen.dart';
 
 void main()=> runApp(MyApp());
 
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Intan Yoshana",
-      home: MyHomePage(),
+      home: SplashScreenPage(),
     );
   }
 }
