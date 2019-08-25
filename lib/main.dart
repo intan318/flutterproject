@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterproject/grid.dart';
 import 'package:flutterproject/login.dart';
 import 'package:flutterproject/main1.dart';
 import 'package:flutterproject/splashscreen.dart';
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Intan Yoshana",
       debugShowCheckedModeBanner: false,
-      home: SplashScreenPage(),
+      home: GridViewPage(),
     );
   }
 }
