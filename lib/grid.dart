@@ -20,53 +20,56 @@ class GridViewPage extends StatelessWidget {
           style: TextStyle(color: Colors.blue),
         ),
       ),
-      body: SafeArea(child:
-       GridView.count(
-        crossAxisCount: 2,
-        childAspectRatio: widthScreen/heightScreen,
-        children: <Widget>[
-          Container(
-            color: Colors.yellowAccent,
-            height: 500.0,
-            child: Center(
-              child: Text(
-                "1",
-                style: TextStyle(fontSize: 24.0),
+      body: SafeArea(
+        child: GridView.count(
+          crossAxisCount: 2,
+          childAspectRatio: widthScreen / heightScreen,
+          children: <Widget>[
+            Container(
+              color: Colors.yellowAccent,
+              height: 500.0,
+              child: Center(
+                  child: Image.asset(
+                'assets/logo.png',
+                height: 100,
+                width: 100,
+              )),
+            ),
+            Container(
+              color: Colors.greenAccent,
+              height: 500.0,
+              child: Center(
+                child: Image.asset(
+                  'assets/logo.png',
+                  height: 100,
+                  width: 100,
+                ),
               ),
             ),
-          ),
-          Container(
-            color: Colors.blueAccent,
-            height: 500.0,
-            child: Center(
-              child: Text(
-                "2",
-                style: TextStyle(fontSize: 24.0),
+            Container(
+              color: Colors.brown,
+              height: 500.0,
+              child: Center(
+                child: Image.asset(
+                  'assets/logo.png',
+                  height: 100,
+                  width: 100,
+                ),
               ),
             ),
-          ),
-          Container(
-            color: Colors.brown,
-            height: 500.0,
-            child: Center(
-              child: Text(
-                "3",
-                style: TextStyle(fontSize: 24.0),
+            Container(
+              color: Colors.orange,
+              height: 500.0,
+              child: Center(
+                child: Image.asset(
+                  'assets/logo.png',
+                  height: 100,
+                  width: 100,
+                ),
               ),
-            ),
-          ),
-          Container(
-            color: Colors.orange,
-            height: 500.0,
-            child: Center(
-              child: Text(
-                "4",
-                style: TextStyle(fontSize: 24.0),
-              ),
-            ),
-          )
-        ],
-      ),
+            )
+          ],
+        ),
       ),
     );
   }
